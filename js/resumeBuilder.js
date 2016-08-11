@@ -14,11 +14,11 @@ var bio = {
         "github": "http://www.github.com/chelseadlee",
         "location": "Seattle"
     },
-    "welcomeMessage": "Hey, I'm Chelsea and I like making websites",
+    "welcomeMessage": "Hey, I'm Chelsea and I like making websites.",
     "skills": [
         "HTML", "CSS", "JavaScript", "WordPress"
     ],
-    "bioPic": "images/fry.jpg",
+    "bioPic": "images_src/fry.jpg",
     display: function() {
         // format and replace bio object data
         var headerName = HTMLheaderName.replace("%data%", bio.name);
@@ -41,8 +41,8 @@ var bio = {
         $("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
         $("#headerMsg").append(formattedMsg);
         $(".column1").append(formattedPic);
-        $("#gotSkills").append(HTMLskillsStart);
-        $("#skills").append(skillsListItems);
+        $("#skillsBox").append(HTMLskillsStart);
+        $("#skills-ul").append(skillsListItems);
     }
 };
 
@@ -52,7 +52,7 @@ var work = {
     "jobs": [{
         "employer": "Boyden global executive search",
         "title": "Research Associate",
-        "location": "San Francisco (remote)",
+        "location": "Seattle",
         "dates": "2016 - Present",
         "description": "Research and contact candidates for executive search clients",
         "url": "http://www.boyden.com"
@@ -113,7 +113,7 @@ var projects = {
         "dates": "2015 - 2016",
         "description": "Built website for local nonprofit",
         "url": "http://www.rootsinfo.org",
-        "images": ["images/197x148.gif"]
+        "images": ["images_src/197x148.gif"]
     }],
     display: function() {
         projects.projects.forEach(function(project) {
